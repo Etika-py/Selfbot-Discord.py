@@ -1,0 +1,32 @@
+import discord
+from discord import Member
+from discord.ext import commands
+
+client = commands.Bot(command_prefix='/', help_command=None, self_bot=True)
+
+class SelfBot(commands.Cog):
+    def __init__(self, client):
+      self.client = client
+
+    @commands.command()
+    async def ping(self, ctx): # Its very important to use the method 'self' at the very beginnig of every command
+       await ctx.send(f'**PONG**, Your Latency is: **{round(client.latency * 1000)}ms**')
+
+    @commands.command()
+    async def embedping(self, ctx):
+      embed = discord.Embed(title='**PONG**', description=f'Yout Latency is: **{round(client.latency * 1000)}**ms', colour = discord.Color.blue())
+      await ctx.send(embed=embed)
+      
+    @commands.command()
+    async def avatar(self, ctx, member: discord.Member):
+      await ctx.send(f'{member.avatar_url}')
+      
+      
+# If you want to code a Selfbot, you should have decent discord.py Skills
+
+
+client.add_cog(SelfBot(client))
+
+client.run('your acc token', bot=False)
+
+# Make sure to leave a comment if u need any help or to tell me if it worked fine, and please Credit me if u use this 'Base' :D Thanks for reading me!
