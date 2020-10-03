@@ -21,7 +21,7 @@ class SelfBot(commands.Cog):
       await ctx.send(embed=embed)
     
       
-# If you want to Code a Selfbot, you should have decent discord.py Skills
+# If you want to Code a Selfbot, you should have decent Discord.py Skills
 
 
 client.add_cog(SelfBot(client))
