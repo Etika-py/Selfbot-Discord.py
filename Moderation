@@ -28,4 +28,4 @@ client.add_cog(SelfBot(client))
 
 client.run('your acc token', bot=False)
 
-# Make sure to leave a comment if u need any help or to tell me if it worked fine, and please Credit me if u use this 'Base' :D Thanks for reading me!
+# Make sure to leave a Comment if u need any help or to tell me if it worked fine, and please Credit me if u use this 'Base' :D Thanks for reading me!
